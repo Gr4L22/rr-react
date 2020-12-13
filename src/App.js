@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React from 'react'
+import {BrowserRouter as Router , Route} from 'react-router-dom';
+import Boilers from './components/pages/Boilers';
+import Buildinglist from './components/pages/Buildinglist';
+import Header from './components/layout/header';
+import BoilersH from './components/layout/headerBoilerType';
+import BuildingH from './components/layout/headerBuildig';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Router>
+      <div className="App">
+        <Header />
+        <Route path='/buildings' render={props => (
+          <React.Fragment>
+            <BuildingH />
+            <Buildinglist />
+          </React.Fragment>
+        )}/>
+        <Route path='/boilers' render={props => (
+          <React.Fragment>
+            <BoilersH />
+            <Boilers />
+          </React.Fragment>
+        )}/>
+      </div>
+    </Router>
   );
 }
 
