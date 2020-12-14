@@ -1,17 +1,12 @@
 import React, { Component } from 'react'
-import BoilersList from '../../mocks/boilersType.json'
+import List from './list/Boilerlist';
 
 export class Boilers extends Component {
-    state = {BoilersList}
     render() {
-        return (
-            <div>
-                <h1>Hola</h1>
-            </div>
-        )
+        return this.props.BoilersList.map(list => (
+            <List key= {list.id} list={list} />
+        ))
     }
 }
-
-
 
 export default Boilers
