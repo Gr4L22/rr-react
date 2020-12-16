@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export class Boilerlist extends Component {
-  state2 = { ...this.props.Boilerlist, isEditing: false };
+  state = { ...this.props.list, isEditing: false };
   ulStyle = () => {
     return {
       listStyleType: "none",
@@ -22,13 +22,16 @@ export class Boilerlist extends Component {
       textAlign: "center",
       padding: "16px 10px 16px",
     };
-  };/*
+  };
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
   toggleEdit = () => {
-    this.setState({ isEditing: !this.state2.isEditing });
+    this.setState({ isEditing: !this.state.isEditing });
   };
   saveChanges = () => {
     this.toggleEdit();
-    this.props.updateBuilding(this.state);
+    this.props.updateBoiler(this.state);
   };
   render() {
     const { id } = this.props.list;
@@ -38,33 +41,25 @@ export class Boilerlist extends Component {
           <input
             style={{ flex: "3" }}
             type="text"
-            name="address"
-            placeholder="Address"
-            value={this.state.address}
+            name="skillsId"
+            placeholder="Skills ID"
+            value={this.state.skillsId}
             onChange={this.onChange}
           ></input>
           <input
             style={{ flex: "2" }}
-            type="number"
-            name="boilersId"
-            placeholder="Boiler Type"
-            value={this.state.boilersId}
+            type="text"
+            name="description"
+            placeholder="Description"
+            value={this.state.description}
             onChange={this.onChange}
           ></input>
           <input
             style={{ flex: "3" }}
             type="text"
-            name="fullName"
-            placeholder="Name"
-            value={this.state.fullName}
-            onChange={this.onChange}
-          ></input>
-          <input
-            style={{ flex: "2" }}
-            type="text"
-            name="phone"
-            placeholder="Phone"
-            value={this.state.phone}
+            name="stock"
+            placeholder="Stock"
+            value={this.state.stock}
             onChange={this.onChange}
           ></input>
           <div>
@@ -78,9 +73,7 @@ export class Boilerlist extends Component {
         </ul>
       );
     }
-    ////////////////*/
-    render() {
-        const { id } = this.props.list;
+
     return (
       <div>
         <ul style={this.ulStyle()}>
@@ -95,7 +88,7 @@ export class Boilerlist extends Component {
           >
             D
           </button>
-          <button className="btn" style={btnModi}>
+          <button onClick={this.toggleEdit} className="btn" style={btnModi}>
             M
           </button>
         </ul>

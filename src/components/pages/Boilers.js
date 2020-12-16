@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
-import List from './list/Boilerlist';
+import React, { Component } from "react";
+import List from "./list/Boilerlist";
 
 class Boilers extends Component {
-    render() {
-        return this.props.BoilersList.map(list => (
-            <List key= {list.id} list={list} delBoild={this.props.delBoild}/>
-        ))
-    }
+  render() {
+    return this.props.BoilersList.map((list) => (
+      <List
+        key={list.id}
+        list={list}
+        delBoild={this.props.delBoild}
+        updateBoiler={this.props.updateBoiler}
+      />
+    ));
+  }
 }
 
-export default Boilers
+export default Boilers;

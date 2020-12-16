@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export class AddBoiler extends Component {
-  state2 = {
+  state = {
     skillsId: "",
     description: "",
     stock: "",
@@ -9,7 +9,7 @@ export class AddBoiler extends Component {
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.AddBoiler(this.state2);
+    this.props.addBoiler(this.state);
     this.setState({
       skillsId: "",
       description: "",
@@ -21,10 +21,10 @@ export class AddBoiler extends Component {
       <form onSubmit={this.onSubmit} style={{ display: "flex" }}>
         <input
           style={{ flex: "3" }}
-          type="number"
+          type="text"
           name="skillsId"
           placeholder="Skills ID"
-          value={this.state2.skillsId}
+          value={this.state.skillsId}
           onChange={this.onChange}
         ></input>
         <input
@@ -32,15 +32,15 @@ export class AddBoiler extends Component {
           type="text"
           name="description"
           placeholder="Description"
-          value={this.state2.description}
+          value={this.state.description}
           onChange={this.onChange}
         ></input>
         <input
           style={{ flex: "3" }}
-          type="number"
+          type="text"
           name="stock"
           placeholder="Stock"
-          value={this.state2.stock}
+          value={this.state.stock}
           onChange={this.onChange}
         ></input>
         <input

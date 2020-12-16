@@ -1,38 +1,37 @@
 [
-    {
-        "id": 1,
-        "address": "620 Loomis Trail",
-        "boilersId": 4,
-        "fullName": "Mita",
-        "phone": "8819373127"
-    },
-    {
-        "id": 2,
-        "address": "814 Boyd Terrace",
-        "boilersId": 27,
-        "fullName": "Linklinks",
-        "phone": "8536475416"
-    },
-    {
-        "id": 3,
-        "address": "94 Eagan Court",
-        "boilersId": 7,
-        "fullName": "Eayo",
-        "phone": "5976321847"
-    },
-    {
-        "id": 4,
-        "address": "7232 Maywood Trail",
-        "boilersId": 3,
-        "fullName": "Flashpoint",
-        "phone": "6987424284"
-    },
-    {
-        "id": 5,
-        "address": "4 Kensington Parkway",
-        "boilersId": 21,
-        "fullName": "Thoughtsphere",
-        "phone": "3207457714"
-    }
-    
+  {
+    "id": 1,
+    "address": "620 Loomis Trail",
+    "boilersId": 4,
+    "fullName": "Mita",
+    "phone": "8819373127"
+  },
+  {
+    "id": 2,
+    "address": "814 Boyd Terrace",
+    "boilersId": 27,
+    "fullName": "Linklinks",
+    "phone": "8536475416"
+  },
+  {
+    "id": 3,
+    "address": "94 Eagan Court",
+    "boilersId": 7,
+    "fullName": "Eayo",
+    "phone": "5976321847"
+  },
+  {
+    "id": 4,
+    "address": "7232 Maywood Trail",
+    "boilersId": 3,
+    "fullName": "Flashpoint",
+    "phone": "6987424284"
+  },
+  {
+    "id": 5,
+    "address": "4 Kensington Parkway",
+    "boilersId": 21,
+    "fullName": "Thoughtsphere",
+    "phone": "3207457714"
+  }
 ]

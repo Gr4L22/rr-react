@@ -1,32 +1,32 @@
 [
-    {
-        "id": 1,
-        "skillsId": 2,
-        "description": "Orange",
-        "stock": 7
-    },
-    {
-        "id": 2,
-        "skillsId": 10,
-        "description": "Orange",
-        "stock": 16
-    },
-    {
-        "id": 3,
-        "skillsId": 3,
-        "description": "Turquoise",
-        "stock": 6
-    },
-    {
-        "id": 4,
-        "skillsId": 5,
-        "description": "Pink",
-        "stock": 20
-    },
-    {
-        "id": 5,
-        "skillsId": 4,
-        "description": "Puce",
-        "stock": 7
-    }
+  {
+    "id": 1,
+    "skillsId": 2,
+    "description": "Orange",
+    "stock": 7
+  },
+  {
+    "id": 2,
+    "skillsId": 10,
+    "description": "Orange",
+    "stock": 16
+  },
+  {
+    "id": 3,
+    "skillsId": 3,
+    "description": "Turquoise",
+    "stock": 6
+  },
+  {
+    "id": 4,
+    "skillsId": 5,
+    "description": "Pink",
+    "stock": 20
+  },
+  {
+    "id": 5,
+    "skillsId": 4,
+    "description": "Puce",
+    "stock": 7
+  }
 ]

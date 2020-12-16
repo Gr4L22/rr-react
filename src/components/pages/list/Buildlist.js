@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export class Buildlist extends Component {
-    state = {...this.props.Buildlist, isEditing: false};
+  state = { ...this.props.list, isEditing: false };
   ulStyle = () => {
     return {
       listStyleType: "none",
@@ -22,6 +22,9 @@ export class Buildlist extends Component {
       textAlign: "center",
       padding: "16px 10px 16px",
     };
+  };
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   };
   toggleEdit = () => {
     this.setState({ isEditing: !this.state.isEditing });
@@ -94,7 +97,7 @@ export class Buildlist extends Component {
           >
             D
           </button>
-          <button onClick={this.saveChanges} className="btn" style={btnModi}>
+          <button onClick={this.toggleEdit} className="btn" style={btnModi}>
             M
           </button>
         </ul>

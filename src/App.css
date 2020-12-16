@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ li {
   list-style: none;
   float: left;
   display: block;
-  color: rgb(19,84,76);
+  color: rgb(19, 84, 76);
   font-weight: 800;
   font-size: 12;
   text-align: center;
@@ -25,17 +25,17 @@ ul {
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgb(239,232,216);
+  background-color: rgb(239, 232, 216);
   border: 1px solid #333;
 }
 header {
-  background: rgb(239,232,216);
-  color: rgb(19,84,76);
+  background: rgb(239, 232, 216);
+  color: rgb(19, 84, 76);
   text-align: center;
   padding: 10px;
 }
 h2 {
-  background: rgb(239,232,216);
+  background: rgb(239, 232, 216);
   color: black;
   text-align: center;
   padding: 10px;

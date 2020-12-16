@@ -13,8 +13,8 @@ import AddBoiler from "./components/pages/add/AddBoiler";
 import "./App.css";
 
 class App extends Component {
-  state = { BuildingList };
-  state2 = { BoilersList };
+  state = { BuildingList, BoilersList };
+
   delBuild = (id) => {
     this.setState({
       BuildingList: [
@@ -27,11 +27,11 @@ class App extends Component {
   updateBuilding = (Updated) => {
     this.setState({
       BuildingList: [
-        ...this.state.BuildingList.map((build) => {
-          if (build.id === Updated.id) {
-            build = Updated;
+        ...this.state.BuildingList.map((list) => {
+          if (list.id === Updated.id) {
+            list = Updated;
           }
-          return build;
+          return list;
         }),
       ],
     });
@@ -52,16 +52,16 @@ class App extends Component {
   delBoild = (id) => {
     this.setState({
       BoilersList: [
-        ...this.state2.BoilersList.filter(
+        ...this.state.BoilersList.filter(
           (BoilersList) => BoilersList.id !== id
         ),
       ],
     });
   };
-  updateBuilding = (Updated) => {
+  updateBoiler = (Updated) => {
     this.setState({
-      BuildingList: [
-        ...this.state.BuildingList.map((build) => {
+      BoilersList: [
+        ...this.state.BoilersList.map((build) => {
           if (build.id === Updated.id) {
             build = Updated;
           }
@@ -70,7 +70,7 @@ class App extends Component {
       ],
     });
   };
-  AddBoiler = ({ skillsId, description, stock }) => {
+  addBoiler = ({ skillsId, description, stock }) => {
     const newList = {
       id: uuidv4(),
       skillsId,
@@ -78,7 +78,7 @@ class App extends Component {
       stock,
     };
     this.setState({
-      BoilersList: [...this.state2.BoilersList, newList],
+      BoilersList: [...this.state.BoilersList, newList],
     });
   };
 
@@ -107,10 +107,11 @@ class App extends Component {
               <React.Fragment>
                 <BoilersH />
                 <Boilers
-                  BoilersList={this.state2.BoilersList}
+                  BoilersList={this.state.BoilersList}
                   delBoild={this.delBoild}
+                  updateBoiler={this.updateBoiler}
                 />
-                <AddBoiler AddBoiler={this.AddBoiler} />
+                <AddBoiler addBoiler={this.addBoiler} />
               </React.Fragment>
             )}
           />
