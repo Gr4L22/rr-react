@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import Boilers from "./components/pages/Boilers";
-import Buildinglist from "./components/pages/Building";
+import Building from "./components/pages/Building";
 import Header from "./components/layout/header";
 import BoilersH from "./components/layout/headerBoilerType";
 import BuildingH from "./components/layout/headerBuildig";
@@ -48,7 +48,6 @@ class App extends Component {
       BuildingList: [...this.state.BuildingList, newList],
     });
   };
-  //
   delBoild = (id) => {
     this.setState({
       BoilersList: [
@@ -81,7 +80,6 @@ class App extends Component {
       BoilersList: [...this.state.BoilersList, newList],
     });
   };
-
   render() {
     return (
       <Router>
@@ -92,7 +90,7 @@ class App extends Component {
             render={(props) => (
               <React.Fragment>
                 <BuildingH />
-                <Buildinglist
+                <Building
                   BuildingList={this.state.BuildingList}
                   delBuild={this.delBuild}
                   updateBuilding={this.updateBuilding}

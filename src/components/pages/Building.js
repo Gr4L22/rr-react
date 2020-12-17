@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import List from "./list/Buildlist";
 
-class Buildinglist extends Component {
+class Building extends Component {
   render() {
     return this.props.BuildingList.map((list) => (
       <List
@@ -14,4 +14,4 @@ class Buildinglist extends Component {
   }
 }
 
-export default Buildinglist;
+export default Building;
